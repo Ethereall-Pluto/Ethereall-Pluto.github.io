@@ -237,6 +237,16 @@ a:hover { text-decoration-thickness: 2px; }
 .term .cmd::before { content: "$ "; color: #7f8f87; }
 .term .cmd.cont::before { content: "  "; }   /* continuation of a multi-line command */
 
+/* Wide project card with a picture of the real output */
+.wide-card { margin-bottom: 24px; }
+.wide-card .project-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+.sheet-shot { margin: 0; }
+.sheet-shot img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); }
+.sheet-link { display: block; cursor: zoom-in; }
+.sheet-link:hover img { border-color: var(--accent); }
+.sheet-shot figcaption { color: var(--muted); font-size: 0.75rem; margin-top: 8px; }
+@media (max-width: 980px) { .wide-card .project-body { grid-template-columns: 1fr; } }
+
 /* Case study inside the featured project */
 .case { border-top: 1px solid var(--line); }
 .case summary { cursor: pointer; padding: 16px 24px; font-weight: 500; color: var(--accent); list-style: none; display: flex; align-items: center; gap: 10px; }

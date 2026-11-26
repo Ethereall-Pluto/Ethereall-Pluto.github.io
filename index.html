@@ -112,7 +112,7 @@
 
       <dl class="facts reveal">
         <div><dt>~10</dt><dd data-i18n="f.1">freelance clients for AutoCAD drawings and 3D models</dd></div>
-        <div><dt>3</dt><dd data-i18n="f.2">Python projects published on GitHub</dd></div>
+        <div><dt>4</dt><dd data-i18n="f.2">Python projects published on GitHub</dd></div>
         <div><dt data-i18n="f.3n">769,000&nbsp;h</dt><dd data-i18n="f.3">calculated MTTF of the diploma device</dd></div>
         <div><dt>B2</dt><dd data-i18n="f.4">English, with Ukrainian and Russian native</dd></div>
       </dl>
@@ -265,6 +265,37 @@
             </section>
           </div>
         </details>
+      </article>
+
+      <article class="project wide-card reveal">
+        <header class="project-head">
+          <h3>ESKD Parts List Generator</h3>
+          <span class="tag mono" data-i18n="p4.tag">AutoCAD → ESKD document</span>
+        </header>
+        <div class="project-body">
+          <dl class="pfields">
+            <div><dt data-i18n="d.task">Task</dt><dd data-i18n="p4.task">A parts list written by hand means copying every designator from the schematic, merging R1, R2, R3 into one row, grouping by element type and redrawing the table when a sheet runs out. The list has to match the schematic exactly.</dd></div>
+            <div><dt data-i18n="d.part">My part</dt><dd>
+              <ul>
+                <li data-i18n="p4.l1">Reads every component block and its attributes straight from the AutoCAD DXF, including Cyrillic tag names such as ПОЗ and НАИМ.</li>
+                <li data-i18n="p4.l2">Applies GOST 2.701 and 2.710: sorts by letter code, merges R1…R3 into one row, adds group headings such as “Резисторы”.</li>
+                <li data-i18n="p4.l3">Draws A4 sheets to GOST 2.104 with title block form 2 on the first sheet and 2a on the rest, and never leaves a group heading at the bottom of a sheet.</li>
+                <li data-i18n="p4.l4">Exports the component list to CSV or Excel for checking, and stops with a clear message on a duplicate or malformed designator.</li>
+              </ul>
+            </dd></div>
+            <div><dt data-i18n="d.stack">Stack</dt><dd><ul class="chips"><li>Python</li><li>ezdxf</li><li>openpyxl</li><li>matplotlib</li><li>pytest</li><li>GitHub Actions</li></ul></dd></div>
+            <div><dt data-i18n="d.ex">Example</dt><dd><pre class="term" tabindex="0"><code><span class="cmd">python -m eskd_bom build schematic.dxf \</span>
+<span class="cmd cont">  -o parts_list.dxf \</span>
+<span class="cmd cont">  --code "АБВГ.468157.001ПЭ3" \</span>
+<span class="cmd cont">  --title "Блок управления вентилятором" \</span>
+<span class="cmd cont">  --preview parts_list.png</code></pre></dd></div></span>
+          </dl>
+          <figure class="sheet-shot">
+            <a href="assets/eskd-parts-list.png" class="sheet-link"><img src="assets/eskd-parts-list.png" width="1428" height="960" loading="lazy" decoding="async" alt="Generated parts list on two A4 sheets: capacitors, resistors, diodes and transistors grouped by letter code, with ESKD title blocks"></a>
+            <figcaption class="mono" data-i18n="p4.cap">Output of the tool for a 35-element sample schematic, two A4 sheets. Click to open full size.</figcaption>
+          </figure>
+        </div>
+        <footer class="project-foot"><a class="project-link" href="https://github.com/Ethereall-Pluto/eskd-bom" rel="noopener">github.com/Ethereall-Pluto/eskd-bom</a></footer>
       </article>
 
       <div class="project-grid">
