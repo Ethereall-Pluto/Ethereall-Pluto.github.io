@@ -327,6 +327,24 @@
       <div class="project-grid">
         <article class="project reveal">
           <header class="project-head">
+            <h3>Vacancy Sheets</h3>
+            <span class="tag mono" data-i18n="p5.tag">Google Sheets automation</span>
+          </header>
+          <dl class="project-body pfields">
+            <div><dt data-i18n="d.task">Task</dt><dd data-i18n="p5.task">Stop scrolling job boards every day: collect only new, relevant vacancies into a table I already use to track applications.</dd></div>
+            <div><dt data-i18n="d.part">My part</dt><dd data-i18n="p5.part">Built a tool that reads Djinni RSS feeds, filters them by keywords and stop words, and appends only new rows through the Sheets API. Status dropdown, ARRAYFORMULA columns and highlighting are created automatically, with formulas built for the sheet's locale (; in uk_UA, , in en_US). Tests use a fake worksheet and run offline.</dd></div>
+            <div><dt data-i18n="d.stack">Stack</dt><dd><ul class="chips"><li>Python</li><li>gspread</li><li>Sheets API</li><li>Babel</li><li>pytest</li><li>GitHub Actions</li></ul></dd></div>
+            <div><dt data-i18n="d.ex">Example</dt><dd><pre class="term" tabindex="0"><code><span class="cmd">python -m vacancy_sheets config.toml</span>
+
+ 20 items  djinni.co/jobs/rss/?all_keywords=AutoCAD
+ 20 items  djinni.co/jobs/rss/?primary_keyword=Python
+Added 4 new vacancies</code></pre></dd></div>
+          </dl>
+          <footer class="project-foot"><a class="project-link" href="https://github.com/Ethereall-Pluto/vacancy-sheets" rel="noopener">github.com/Ethereall-Pluto/vacancy-sheets</a></footer>
+        </article>
+
+        <article class="project reveal">
+          <header class="project-head">
             <h3>Job Application Tracker API</h3>
             <span class="tag mono">REST API</span>
           </header>
