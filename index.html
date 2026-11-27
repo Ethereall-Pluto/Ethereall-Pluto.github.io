@@ -298,6 +298,32 @@
         <footer class="project-foot"><a class="project-link" href="https://github.com/Ethereall-Pluto/eskd-bom" rel="noopener">github.com/Ethereall-Pluto/eskd-bom</a></footer>
       </article>
 
+      <article class="project wide-card reveal">
+        <header class="project-head">
+          <h3>AI Support Agent</h3>
+          <span class="tag mono" data-i18n="p6.tag">n8n + Claude</span>
+        </header>
+        <div class="project-body">
+          <dl class="pfields">
+            <div><dt data-i18n="d.task">Task</dt><dd data-i18n="p6.task">A small online store gets the same questions about delivery, payment and returns every day. Customers want an answer at night too, and questions about a specific order still need a person.</dd></div>
+            <div><dt data-i18n="d.part">My part</dt><dd>
+              <ul>
+                <li data-i18n="p6.l1">Built a Telegram assistant in n8n: an AI agent on Claude answers from the company FAQ in the customer's language and remembers the last messages of each chat.</li>
+                <li data-i18n="p6.l2">The model returns structured JSON (answer, category, hand over or not), so routing is a plain condition. Order questions, complaints and anything outside the FAQ go to the operator chat, and the operator replies with /reply.</li>
+                <li data-i18n="p6.l3">Every conversation is logged to Google Sheets; a second workflow sends a daily report: questions, share answered by the assistant, top categories.</li>
+                <li data-i18n="p6.l4">Ships as a template: docker-compose with automatic HTTPS, a step-by-step setup guide, tests for the JavaScript in the Code nodes, and a free Gemini option.</li>
+              </ul>
+            </dd></div>
+            <div><dt data-i18n="d.stack">Stack</dt><dd><ul class="chips"><li>n8n</li><li>AI Agent</li><li>Claude</li><li>Telegram Bot API</li><li>Google Sheets</li><li>JavaScript</li><li>Docker</li><li>Caddy</li><li>GitHub Actions</li></ul></dd></div>
+          </dl>
+          <figure class="sheet-shot">
+            <a href="assets/support-agent-workflow.png" class="sheet-link"><img src="assets/support-agent-workflow.png" width="1600" height="785" loading="lazy" decoding="async" alt="n8n workflow: Telegram trigger, routing, AI agent with Claude, memory and output parser, reply, Google Sheets log and operator handover"></a>
+            <figcaption class="mono" data-i18n="p6.cap">The agent workflow in n8n. Click to open full size.</figcaption>
+          </figure>
+        </div>
+        <footer class="project-foot"><a class="project-link" href="https://github.com/Ethereall-Pluto/support-agent-n8n" rel="noopener">github.com/Ethereall-Pluto/support-agent-n8n</a></footer>
+      </article>
+
       <div class="project-grid">
         <article class="project reveal">
           <header class="project-head">
